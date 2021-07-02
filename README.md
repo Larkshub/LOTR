@@ -1,2 +1,3 @@
 # LOTR
-A nice project with Vue and Vuex
+
+A nice project with Vue and Vuex. Frontend.

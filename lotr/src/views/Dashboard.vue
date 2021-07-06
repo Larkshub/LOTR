@@ -14,7 +14,7 @@ export default {
   name: 'Dashboard',
   data() {
     return {
-      list: 'Lista de libros'
+      list: 'Trilogía'
     };
   },
   computed: {

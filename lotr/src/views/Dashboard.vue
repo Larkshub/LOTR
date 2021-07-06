@@ -1,6 +1,8 @@
 <template>
     <main>
-        <ul v-for="(book,index) in bookList" :key="index">
+        <h1>{{list}}</h1>
+        <ul v-for="(book,index) in books" :key="index">
+          <li>{{book.name}}</li>
         </ul>
     </main>
 </template>
@@ -12,7 +14,7 @@ export default {
   name: 'Dashboard',
   data() {
     return {
-
+      list: 'Trilogía'
     };
   },
   computed: {
@@ -21,6 +23,7 @@ export default {
   },
   methods: {
     ...mapActions(['getAllBooks']),
+
   },
   mounted() {
     this.getAllBooks();

@@ -17,14 +17,14 @@ export default {
   },
   computed: {
     ...mapState(['books']),
-    ...mapMutations(['bookList'])
+    ...mapMutations(['bookList']),
   },
   methods: {
-    ...mapActions(['getAllBooks'])
+    ...mapActions(['getAllBooks']),
   },
   mounted() {
     this.getAllBooks();
-  }
+  },
 };
 </script>
 

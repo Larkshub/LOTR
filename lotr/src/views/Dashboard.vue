@@ -18,16 +18,16 @@ export default {
     };
   },
   computed: {
-    ...mapState(['books'])
-
+    ...mapState(['books']),
+    ...mapMutations(['bookList']),
   },
   methods: {
     ...mapActions(['getAllBooks']),
-    ...mapMutations(['bookList'])
+
   },
   mounted() {
     this.getAllBooks();
-  }
+  },
 };
 </script>
 

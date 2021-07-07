@@ -1,14 +1,16 @@
 <template>
     <main>
         <h1>{{list}}</h1>
-        <ul v-for="(book,index) in books" :key="index">
+        <ul v-for="(book,index) in getTheFirstBook" :key="index">
           <li>{{book.name}}</li>
         </ul>
     </main>
 </template>
 
 <script>
-import { mapActions, mapMutations, mapState } from 'vuex';
+import {
+  mapActions, mapGetters, mapMutations, mapState
+} from 'vuex';
 
 export default {
   name: 'Dashboard',
@@ -19,7 +21,8 @@ export default {
   },
   computed: {
     ...mapState(['books']),
-    ...mapMutations(['bookList'])
+    ...mapMutations(['bookList']),
+    ...mapGetters(['getTheFirstBook'])
   },
   methods: {
     ...mapActions(['getAllBooks'])

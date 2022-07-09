@@ -1,8 +1,13 @@
 <template>
-    <nav>
-        <span><router-link to="/">{{home}}</router-link></span>
-        <span><router-link to="/characters">{{characters}}</router-link></span>
-    </nav>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid custom">
+      <router-link class="navbar-brand" to="/">{{home}}</router-link>
+    </div>
+    <div class="container-fluid">
+      <router-link to="/characters">{{characters}}</router-link>
+    </div>
+
+</nav>
 </template>
 
 <script>
@@ -19,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 
-nav {
+.custom {
     background-color: yellow;
     display: flex;
     justify-content: space-around;

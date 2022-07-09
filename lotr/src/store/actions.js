@@ -13,5 +13,18 @@ export default {
       .then((response) => {
         commit('bookList', response.data.docs);
       });
+  },
+  getAllCharacters({ commit }) {
+    const url = 'https://the-one-api.dev/v2/character';
+    const authorization = {
+      headers: {
+        Accept: 'application/json',
+        Authorization: 'Bearer x6y6jNj1VRAleNB293cR '
+      }
+    };
+    axios(url, authorization)
+      .then((response) => {
+        commit('characterList', response.data.docs);
+      });
   }
 };

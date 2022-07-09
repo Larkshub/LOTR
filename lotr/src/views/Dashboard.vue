@@ -1,7 +1,7 @@
 <template>
     <main>
         <h1>{{list}}</h1>
-        <ul v-for="(book,index) in getTheFirstBook" :key="index">
+        <ul v-for="(book,index) in books" :key="index">
           <li>{{book.name}}</li>
         </ul>
     </main>

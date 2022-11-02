@@ -26,5 +26,18 @@ export default {
       .then((response) => {
         commit('characterList', response.data.docs);
       });
+  },
+  getAllFilms({ commit }) {
+    const url = 'https://the-one-api.dev/v2/movie';
+    const authorization = {
+      headers: {
+        Accept: 'application/json',
+        Authorization: 'Bearer x6y6jNj1VRAleNB293cR '
+      }
+    };
+    axios(url, authorization)
+      .then((response) => {
+        commit('movieList', response.data.docs);
+      });
   }
 };

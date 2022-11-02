@@ -6,6 +6,9 @@
     <div class="container-fluid">
       <router-link to="/characters">{{characters}}</router-link>
     </div>
+    <div class="container-fluid">
+      <router-link to="/films">{{films}}</router-link>
+    </div>
 
 </nav>
 </template>
@@ -16,7 +19,8 @@ export default {
   data() {
     return {
       home: 'Inicio',
-      characters: 'Personajes'
+      characters: 'Personajes',
+      films: 'Películas y series'
     };
   }
 };

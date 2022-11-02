@@ -1,4 +1,5 @@
 export default {
   books: [],
-  characters: []
+  characters: [],
+  movies: []
 };

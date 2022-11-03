@@ -2,11 +2,11 @@ import axios from 'axios';
 
 export default {
   getAllBooks({ commit }) {
-    const url = 'https://the-one-api.dev/v2/book';
+    const url = process.env.VUE_APP_URL_BOOKS;
     const authorization = {
       headers: {
         Accept: 'application/json',
-        Authorization: 'Bearer 0St10OYxOS-IZpsuDVEn'
+        Authorization: `Bearer ${process.env.VUE_APP_AUTH1}`
       }
     };
     axios(url, authorization)
@@ -15,11 +15,11 @@ export default {
       });
   },
   getAllCharacters({ commit }) {
-    const url = 'https://the-one-api.dev/v2/character';
+    const url = process.env.VUE_APP_URL_CHARACTERS;
     const authorization = {
       headers: {
         Accept: 'application/json',
-        Authorization: 'Bearer x6y6jNj1VRAleNB293cR '
+        Authorization: `Bearer ${process.env.VUE_APP_AUTH2}`
       }
     };
     axios(url, authorization)
@@ -28,11 +28,11 @@ export default {
       });
   },
   getAllFilms({ commit }) {
-    const url = 'https://the-one-api.dev/v2/movie';
+    const url = process.env.VUE_APP_URL_MOVIE;
     const authorization = {
       headers: {
         Accept: 'application/json',
-        Authorization: 'Bearer x6y6jNj1VRAleNB293cR '
+        Authorization: `Bearer ${process.env.VUE_APP_AUTH2}`
       }
     };
     axios(url, authorization)

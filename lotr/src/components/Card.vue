@@ -19,7 +19,7 @@
 export default {
   name: 'Card',
   props: {
-    duration: String,
+    duration: Number,
     gender: String,
     name: String,
     race: String
